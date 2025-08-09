@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gada Anusha - Portfolio</title>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+
+
+    nav {
+        background: #333;
+        padding: 10px 0;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+    }
+
+    nav ul li {
+        margin: 0 15px;
+    }
+
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+        transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+        color: #00f2fe;
+    }
+
+    header {
+        background: linear-gradient(135deg, #4facfe, #00f2fe);
+        color: white;
+        padding: 20px;
+        text-align: center;
+    }
+    header {
+    background: #003366; 
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #003366; 
+    color: white;
+    font-size: 14px;
+}
+
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+        margin-top: 5px;
+    }
+
+    .branding {
+        font-size: 14px;
+        color: #ffdf6c;
+        font-weight: bold;
+    }
+
+    .container {
+        max-width: 1000px;
+        margin: auto;
+        padding: 20px;
+    }
+
+    .profile-img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 15px;
+        border: 4px solid #00f2fe;
+    }
+
+    section {
+        margin: 30px 0;
+        padding: 20px;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+        color: #4facfe;
+        margin-bottom: 10px;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    ul li {
+        background: #e8f4ff;
+        padding: 8px;
+        margin: 5px 0;
+        border-radius: 5px;
+    }
+
+    a.button {
+        display: inline-block;
+        padding: 10px 15px;
+        margin-top: 10px;
+        background: #4facfe;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: 0.3s;
+    }
+
+    a.button:hover {
+        background: #00c6ff;
+    }
+
+    footer {
+        text-align: center;
+        padding: 15px;
+        background: #333;
+        color: white;
+        font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+        .container {
+            padding: 10px;
+        }
+        nav ul {
+            flex-direction: column;
+        }
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+    .about-section {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background: #e6f0ff; 
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+    gap: 0; 
+}
+
+.about-left, .about-right {
+    flex: 1;
+    padding: 0; 
+}
+
+.about-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-right h2 {
+    margin-bottom: 10px;
+    
+}
+
+
+
+
+.profile-img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 10px;
+    border: 4px solid #00f2fe;
+}
+.profile-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 4px solid #00f2fe;
+    object-fit: cover;
+}
+.about-tabs {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.tab-btn {
+  padding: 8px 15px;
+  background: #4facfe;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.tab-btn:hover {
+  background: #00c6ff;
+}
+
+.tab-btn.active {
+  background: #003366;
+}
+
+.tab-content {
+  margin-top: 15px;
+}
+
+.tab-content ul {
+  list-style: disc inside;
+  color: #333;
+}
+.projects-boxes {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.project-box {
+    flex: 1;
+     background-color: #ffe6f0;
+    color: #000;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: normal;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    transition: background 0.3s;
+}
+
+.project-box:hover {
+     background-color: #ffe6f0;
+}
+#skills {
+    background-color: #e6f0ff;  
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin-top: 30px;
+}
+nav {
+  background-color: #4facfe;  
+  background-image: linear-gradient(135deg, #4facfe, #00f2fe); 
+  padding: 12px 0;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 18px;
+}
+
+nav ul li a {
+  color: #000000;                   
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ffdf6c;      
+}
+
+#skills {
+  background-color: #f0f8ff; 
+  padding: 50px 0;
+}
+
+
+#resume {
+  background-color: #fff8dc; 
+  padding: 50px 0;
+}
+
+
+#contact {
+  background-color: #e6ffe6; 
+  padding: 50px 0;
+}
+
+
+
+
+
+
+</style>
+</head>
+<body>
+
+
+<nav>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<header id="home">
+    <div class="branding">🌐 AICTE OASIS Infobyte Internship</div>
+    <h1>Gada Anusha</h1>
+    <p>3rd Year BSc Computer Science & Engineering Student | Aspiring Full-Stack Developer</p>
+</header>
+
+<div class="container">
+
+<section class="about-section">
+    <div class="about-left">
+        <img src="anusha1 image.jpg" alt="Gada Anusha" class="profile-img">
+    </div>
+    <div class="about-right">
+        <h2>About Me</h2>
+        <p>Hi, I’m Anusha. I’m a 3rd-year BSc Computer Science student. I enjoy learning Java, JavaScript, and web development. I like solving problems and building projects that help me improve my skills. My goal is to get a good job in software development and keep learning every day</p>
+        <p>...</p>
+
+<div class="about-tabs">
+  <button class="tab-btn active" data-tab="skills">Main Skills</button>
+  <button class="tab-btn" data-tab="awards">Awards</button>
+  <button class="tab-btn" data-tab="certificates">Certificates</button>
+</div>
+
+<div class="tab-content active" id="skills">
+  <ul>
+    <li>Java Programming</li>
+    <li>JavaScript, HTML, CSS</li>
+    <li>sql</li>
+  </ul>
+</div>
+
+<div class="tab-content" id="awards" style="display:none;">
+  <ul>
+    <li> class 2nd Award </li>
+    <li>Best science project Award</li>
+  </ul>
+</div>
+
+<div class="tab-content" id="certificates" style="display:none;">
+  <ul>
+    <li>Oracle Java Fundamentals</li>
+    <li>NPTEL certificates(DSA through Java,c programming,c++)</li>
+    <li> Fundamentals of python</li>
+    <li> AWS certificate</li>
+  </ul>
+</div>
+
+    </div>
+</section>
+    <section id="projects">
+    <h2>Projects</h2>
+    <p>Here are some of the projects I have worked on:</p>
+
+    <div class="projects-boxes">
+        
+        <div class="project-box">1.Food Bridge App (Leftover Food Donation)
+        <p> Food Bridge App (Leftover Food Donation) – A mobile/web platform that connects restaurants with orphanages and people in need. It uses IoT sensors to track leftover food in real-time, enabling timely pickup and reducing food waste.
+
+
+</p>
+        </div>
+
+
+        <div class="project-box"> 2.Temperature Converter Website
+            <p>Temperature Converter Website – A responsive web app that instantly converts temperatures between Celsius, Fahrenheit, and Kelvin, built with HTML, CSS, and JavaScript.
+
+</p>
+        </div>
+                <div class="project-box"> 3.Biometric System Using Arduino
+<p> Biometric System Using Arduino – A fingerprint-based authentication system built with Arduino and a fingerprint sensor, providing secure access control for locks, attendance, and storage applications.
+
+
+
+</p>   
+</div>    
+    </div>
+</section>
+
+
+    
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>Java Programming</li>
+            <li>JavaScript, HTML, CSS</li>
+            
+            <li>SQL & Database Management</li>
+            <li>Problem Solving & DSA</li>
+        </ul>
+    </section>
+
+    
+    <section id="resume">
+        <h2>Resume</h2>
+        <p>You can view or download my resume by clicking the link below.</p>
+        <a href="AnushaGadaResume.pdf" class="button" target="_blank">View Resume</a>
+    </section>
+
+    
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:anusha@example.com">anusha@example.com</a></p>
+        <p>Phone: +91-XXXXXXXXXX</p>
+        <p>Location: Hyderabad, India</p>
+    </section>
+</div>
+
+<footer>
+    Created by Gada Anusha | © 2025 All Rights Reserved
+</footer>
+<script>
+  const tabs = document.querySelectorAll('.tab-btn');
+  const contents = document.querySelectorAll('.tab-content');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      
+      tabs.forEach(btn => btn.classList.remove('active'));
+      
+      contents.forEach(content => content.style.display = 'none');
+
+      
+      tab.classList.add('active');
+      
+      document.getElementById(tab.dataset.tab).style.display = 'block';
+    });
+  });
+</script>
+
+
+</body>
+</html>
